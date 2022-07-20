@@ -16,8 +16,8 @@ class MyAdapter2(
     inner class ViewHolder(private val binding: ItemRv2Binding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(user: User2, position: Int) {
-//            loadImage(binding.image, user.avatar_url, context)
-            Picasso.get().load(user.avatar_url).into(binding.image)
+            loadImage(binding.image, user.avatar_url, context)
+//            Picasso.get().load(user.avatar_url).into(binding.image)
             binding.text.text = user.login
         }
     }
